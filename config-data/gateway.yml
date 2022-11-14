@@ -1,3 +1,12 @@
+info:
+  app:
+    name: ${spring.application.name}
+eureka:
+   client:
+      registerWithEureka: false
+      fetchRegistry: true
+      serviceURL:
+         defaultZone: http://localhost:8761/eureka
 server:
   port: ${PORT:${SERVER_PORT:8080}}
 
@@ -19,16 +28,9 @@ spring:
           predicates:
             - Path=/api/v1/movies/**
 
-info:
-  app:
-    name: ${spring.application.name}
 
-eureka:
-   client:
-      registerWithEureka: false
-      fetchRegistry: true
-      serviceURL:
-         defaultZone: http://localhost:8761/eureka
+
+
 management:
    endpoint:
       gateway:
